@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="setup">
+<head>
+    <title>Angular OrderBy</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+    <script src="Angular_OrderBy.js"></script>
+</head>
+
+<body>
+    <h2>RepeaterController</h2>
+    <div ng-controller="RepeaterController">
+        <table class="user">
+            <tr>
+                <th><a href="" ng-click="reverse=!reverse;order('name', reverse)">Name</a></th>
+                <th><a href="" ng-click="reverse=!reverse;order('gender', reverse)">Gender</a></th>
+                <th><a href="" ng-click="reverse=!reverse;order('phone',reverse)">Phone</a></th>
+            </tr>
+            <tr ng-repeat="user in users">
+                <td>{{user.name}}</td>
+                <td>{{user.gender}}</td>
+                <td>{{user.phone}}</td>
+            </tr>
+        </table>
+
+        <h2>CountController</h2>
+        <div ng-controller="CountController">
+            <h2>{{val}}</h2>
+            <button ng-click="up()">Increment</button>
+            <button ng-click="down()">Decrement</button>
+        </div>
+    </div>
+</body>
+</html>
